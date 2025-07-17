@@ -28,7 +28,7 @@ public class Switch_1 {
 				System.out.println("5학년은 70점 이상합격");
 				break;
 			case 6:
-				System.out.println("6학학년은 80점 이상합격");
+				System.out.println("6학년은 80점 이상합격");
 				break;
 		default: // if문 else와 같은 역할
 			System.out.println("잘못입력하셨습니다");
