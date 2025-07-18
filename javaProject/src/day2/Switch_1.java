@@ -10,7 +10,7 @@ public class Switch_1 {
 		Scanner s = new Scanner(System.in);
 
 		System.out.print("숫자 입력 : ");
-		int num = s.nextInt();
+		int num = s.nextInt(); // 브레이크가 있으면 아예 스위치문 밖으로 빠져나옴
 		switch (num) { // swith문은 if문 처럼 바로빠져나가지않음 - >빠져나가려면 break문이 필요
 			case 1:
 				System.out.println("1학년은 30점 이상합격");
