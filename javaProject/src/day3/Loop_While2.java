@@ -44,18 +44,15 @@ public class Loop_While2 {
 			int b = ran.nextInt(9) + 1;
 			System.out.print(a + " * " + b + " = ");
 			int ans = s.nextInt();
-			if (count == 5) {
-				System.out.println("5문제를 맞추어 종료합니다.");
-				break;
-			} else if (!(
-					count == 5)) {
-				if (ans == a * b) {
-					System.out.println("정답입니다");
-					count++;
-				} else {
-					System.out.println("오답입니다");
+			if(ans == a*b) {
+				System.out.println("정답입니다");
+				count++;
+				if(count == 5) {
+					System.out.println("5문제를 맞추어 종료합니다");
+					break;
 				}
-
+			}else {
+				System.out.println("틀렸습니다");
 			}
 		}
 	}
