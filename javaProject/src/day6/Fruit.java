@@ -39,6 +39,7 @@ public class Fruit {
 //		} else {
 //			this.price = price;
 //		}
+	
 //	}	// 간접접근은 메소드에서 제어가 가능함 (권한확인해서 접근을 허용하는 등..)
 
 	
