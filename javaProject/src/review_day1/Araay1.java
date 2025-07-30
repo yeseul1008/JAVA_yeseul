@@ -26,26 +26,35 @@ public class Araay1 {
 		for (int i = 0; i <scoreArr.length; i++) {
 			sum += scoreArr[i];
 		}
-		int avg = (sum/scoreArr.length);
+		System.out.print("평균이 넘는 과목은 ");
+		double avg = ((double)sum/scoreArr.length);
 		// 넘는 과목 수 구하기
 		for(int i = 0; i <scoreArr.length; i++) {
 			if (scoreArr[i]>avg) {
+				System.out.print(subjectArr[i] + " ");
 				count++;
 			}
 		}
-		String arr[] = new String[count];
-		int index = 0;
-		for (int i = 0 ; i <scoreArr.length; i++) {
-			if (scoreArr[i]>avg) {
-				arr[index] = subjectArr[i];
-				index++;
-			}
-		}
-		System.out.print("평균이 넘는 과목은 ");
-		for (int i = 0; i<arr.length; i++) {
-			System.out.print(arr[i] + " ");
-		}
-		System.out.print(" 입니다");
+		System.out.print("입니다");
+		
+		
+		// String subSte = ""; 이렇게 공백 객체 만들고 이 객체 안에 반복문을 이용해서 평균넘는 과목들 넣고 나중에 출력
+		// 하는 방법도 가능
+		
+		
+//		String arr[] = new String[count];
+//		int index = 0;
+//		for (int i = 0 ; i <scoreArr.length; i++) {
+//			if (scoreArr[i]>avg) {
+//				arr[index] = subjectArr[i];
+//				index++;
+//			}
+//		}
+//		
+//		for (int i = 0; i<arr.length; i++) {
+//			System.out.print(arr[i] + " ");
+//		}
+//		System.out.print("입니다");
 	}
 
 }
