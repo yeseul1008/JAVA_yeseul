@@ -6,6 +6,12 @@ import java.util.Random;
 
 public class ArrayFunc {
 
+	public static final int ENEN = 0; // 헷갈리지 않게 아예 상수로 정의하고 사용
+	public static final int ODD = 1;
+	
+	
+	private ArrayFunc() {} //이런식으로 객체 생성 불가능하도록 생성자를 private으로 선언할수있음 
+	
 	// 배열의 모든값을 음수로 만드는 메소드
 	// parameter1: 정수형 배열
 	public static void minusArr(int[] arr) {
@@ -144,4 +150,17 @@ public class ArrayFunc {
 		minusArr(arr);
 
 	}
+	public static int arrLength(int[] arr, int kind) {
+		int size = 0;
+		int num = kind;
+
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] % 2 == num) {
+				size++;
+			}
+		}
+		return size;
+
+	}
+	
 }
