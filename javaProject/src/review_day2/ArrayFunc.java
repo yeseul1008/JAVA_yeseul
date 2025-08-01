@@ -163,4 +163,15 @@ public class ArrayFunc {
 
 	}
 	
+	public static int[] concat(int[] arr1, int[] arr2) {
+		int[] array = new int[arr1.length+arr2.length]; //{1,1,1,1,0,0,0,0,0}
+		for (int i = 0; i<arr1.length; i++) { //4
+			array[i] = arr1[i];}
+		int i = 0;
+		for (int j = arr1.length; j< arr1.length+arr2.length; j++) {
+			array[j] = arr2[i++];
+		}
+		return array;
+	}
+	
 }
