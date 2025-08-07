@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class FruitMarket_Teacher {
+	
 
 	public static int checkNumber(String msg) {
 		Scanner s = new Scanner(System.in);

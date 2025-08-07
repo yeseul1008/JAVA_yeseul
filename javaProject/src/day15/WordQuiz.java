@@ -41,13 +41,13 @@ public class WordQuiz {
 		Random ran = new Random();
 		// 1. quizList() 메소드 호출을 통해 18개의 문제가 담긴 리스트 리턴 받기
 		//    리턴 타입은 리스트안에 맵이 담긴 형태 (ex [{대한민국:서울}, {영국:런던}, {프랑스:파리} ... ]
-		ArrayList<HashMap<String, String>> quizList = quizList();
+		ArrayList<HashMap<String, String>> quizList = quizList();// 해시맵을 담는 리스트
 		
 		System.out.println("수도 문제 풀이 ! [-1을 입력하면 종료됩니다.]");
 		System.out.println("현재 총 " + quizList.size() + "문제가 있습니다!");
 		
 		// 2. 중복된 문제 방지를 위해 출제된 문제의 index를 보관할 map 생성
-		HashMap<Integer, Integer> keyTable = new HashMap<>();
+		HashMap<Integer, Integer> keyTable = new HashMap<>(); //문제의 인덱스 보관 전용 맵
 		while(true) {
 			// 3. 랜덤한 문제 출제를 위해 리스트에 랜덤으로 접근하기 위해 랜덤한 숫자 생성
 			int ranNum = ran.nextInt(quizList.size());
@@ -67,7 +67,7 @@ public class WordQuiz {
 			// 6. 랜덤한 숫자에 해당 하는 map 가져오기
 			//    ex) ranNum이 10이면 quizList에 10번째 index에 있는 map을 quiz에 넣기
 			//        quiz는 {대한민국:서울} 이런 형태의 맵이 될 것
-			HashMap<String, String> quiz = quizList.get(ranNum);
+			HashMap<String, String> quiz = quizList.get(ranNum); //하나만 빼오는 해시맵
 			String country = "";
 			String capital = "";
 			

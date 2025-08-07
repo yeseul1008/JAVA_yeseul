@@ -20,9 +20,9 @@ public class Quiz7 {
 		String str = s.nextLine();
 		String finalWord = "";
 
-		ArrayList<String> arr = new ArrayList<>();
+//		ArrayList<String> arr = new ArrayList<>();
 		HashMap<String, Integer> map = new HashMap<>();
-		ArrayList<HashMap<Integer, Integer>> arrList = new ArrayList<>();
+//		ArrayList<HashMap<Integer, Integer>> arrList = new ArrayList<>();
 
 		for (int i = 0; i < str.length(); i++) {
 			String word = Character.toString(str.charAt(i)).toLowerCase();

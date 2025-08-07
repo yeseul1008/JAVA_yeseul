@@ -13,7 +13,7 @@ public class FruitMarketOpOp {
 			System.out.print(msg + " : ");
 			input = s.nextInt();
 
-			// 가격 100단위 인지 체크하는 조건문
+			// 가격메뉴: 가격 100단위 인지 체크하는 조건문
 			if (msg.equals("가격")) {
 				if (input % 100 != 0) {
 					System.out.println("가격은 100단위로 입력해 주세요 ");
@@ -21,7 +21,7 @@ public class FruitMarketOpOp {
 				}
 			}
 
-			// 숫자 0 혹은 음수인지 체크하는 조건문
+			// 가격메뉴, 갯수 메뉴: 숫자 0 혹은 음수인지 체크하는 조건문
 			if (input <= 0) {
 				System.out.println("음수는 불가능 합니다. 다시 입력해주세요.");
 			} else {
@@ -31,7 +31,7 @@ public class FruitMarketOpOp {
 
 		return input;
 	}
-
+	// 이전에 입력했던 과일인지 찾기
 	public static HashMap<String, Object> searchFruit(ArrayList<HashMap<String, Object>> list, String fruitName) {
 		for (int i = 0; i < list.size(); i++) {
 			HashMap<String, Object> getFruit = list.get(i);
@@ -39,7 +39,7 @@ public class FruitMarketOpOp {
 				return getFruit;
 			}
 		}
-		return null;
+		return null; //겹치는 이름 없는경우
 	}
 
 	public static void main(String[] args) {
@@ -114,7 +114,7 @@ public class FruitMarketOpOp {
 					System.out.println("해당 과일이 존재하지 않습니다.");
 				}else {
 					int newPrice = checkNumber("가격"); //가격으로 넣는거 중요
-					fruit.put("price", newPrice);
+					fruit.put("price", newPrice); // 맵에 같은 이름으로 넣으면 원래거 사라지고 이거 넣어짐
 					System.out.println(fruitName +"의 가격이" + newPrice + "로 변경됐습니다.");
 				}
 
