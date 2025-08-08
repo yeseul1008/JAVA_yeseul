@@ -10,8 +10,8 @@ import java.util.Random;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-public class AnonymousClassListener extends JFrame{
-	public AnonymousClassListener() {
+public class AnonymousClassListener extends JFrame{ // 컨테이너 상속
+	public AnonymousClassListener() { // 생성자로 동작
 		 setTitle("Action 이벤트 리스너 작성");
 		 setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		 Container c = getContentPane();
@@ -54,7 +54,7 @@ public class AnonymousClassListener extends JFrame{
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		 new MouseListenerEx();
+		 new AnonymousClassListener();
 	}
 
 }

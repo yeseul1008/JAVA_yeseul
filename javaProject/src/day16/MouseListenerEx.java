@@ -9,24 +9,24 @@ import javax.swing.JLabel;
 
 public class MouseListenerEx extends JFrame {
 	 private JLabel la = new JLabel("Hello"); 
-	 public MouseListenerEx() {
+	 public MouseListenerEx() { // 생성자
 	  setTitle("Mouse 이벤트 예제");
 	  setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	  Container c = getContentPane();
-	  c.addMouseListener(new MouseListener() {
+	  c.addMouseListener(new MouseListener() { // 익명클래스
 		
 		@Override
 		public void mouseReleased(MouseEvent e) {
 			// TODO Auto-generated method stub
-			 int x = e.getX();
-			 int y = e.getY();
-			 la.setLocation(x, y);
+
 		}
 		
 		@Override
 		public void mousePressed(MouseEvent e) {
 			// TODO Auto-generated method stub
-			
+			 int x = e.getX();
+			 int y = e.getY();
+			 la.setLocation(x, y);
 		}
 		
 		@Override
@@ -58,7 +58,7 @@ public class MouseListenerEx extends JFrame {
 	  
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+		new MouseListenerEx();
 	}
 
 }
